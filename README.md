@@ -1,14 +1,15 @@
-# PalindromeCheckerApp
-## Palindrome Checker Management System
-This program initializes a simple Palindrome Checker application.
-### Features
-- Displays system welcome message
-- Shows application version
-- Confirms system initialization
-### Concept Used
-- Java main() method
-- Console output using System.out.println()
-### Compilation
-javac UseCase1PalindromeCheckerApp.java
-### Execution
-java UseCase1PalindromeCheckerApp
+/**
+* This program checks whether a given string is a palindrome.
+* A palindrome is a word, phrase, or sequence that reads the same
+* forward and backward.
+*
+* The program compares characters from the beginning and end of
+* the string and loops only until half of the string length
+* for efficiency.
+*
+* This use case introduces fundamental comparison logic
+* before using advanced data structures.
+*
+* @author Developer
+* @version 2.0
+  */

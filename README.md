@@ -1,33 +1,49 @@
-## Palindrome Checker using LinkedList
+## Palindrome Checker using Two Pointer Method
 
 ### Workflow
 
-1. **Input Initialization**
-   - Define the input string to test (example: "level").
+1. **Input String**
 
-2. **LinkedList Creation**
-   - A `LinkedList<Character>` is created to store characters.
+   * A string is provided as input (example: `"racecar"`).
 
-3. **Insert Characters**
-   - Each character of the string is added to the linked list.
+2. **Method Creation**
+
+   * A method `checkPalindrome(String input)` is used to verify the palindrome.
+
+3. **Pointer Initialization**
+
+   * `start = 0` (first character)
+   * `end = input.length() - 1` (last character)
 
 4. **Comparison Process**
-   - The program removes characters from both ends:
-      - `removeFirst()` → first character
-      - `removeLast()` → last character
 
-5. **Palindrome Check**
-   - If both characters match, the checking continues.
-   - If they do not match, the string is not a palindrome.
+   * Compare characters at `start` and `end`.
 
-6. **Termination Condition**
-   - The process stops when one or zero elements remain.
+5. **Pointer Movement**
 
-7. **Result**
-   - If no mismatch occurs → **Palindrome**
-   - Otherwise → **Not a Palindrome**
+   * If characters match:
+
+      * Increment `start`
+      * Decrement `end`
+
+6. **Mismatch Condition**
+
+   * If characters differ → return `false`.
+
+7. **Completion**
+
+   * If all pairs match → return `true`.
+
+### Example
+
+Input:
+racecar
+
+Output:
+Is Palindrome? : true
 
 ### Concepts Used
-- LinkedList data structure
-- Two-end comparison
-- Character traversal
+
+* Two pointer technique
+* String indexing
+* While loop comparison

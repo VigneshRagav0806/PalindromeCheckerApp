@@ -1,31 +1,33 @@
-## Palindrome Checker using Stack (Java)
+## Palindrome Checker using LinkedList
 
 ### Workflow
 
 1. **Input Initialization**
-  - A string input is defined (example: `"noon"`).
+   - Define the input string to test (example: "level").
 
-2. **Stack Creation**
-  - A `Stack<Character>` is created to store characters of the string.
+2. **LinkedList Creation**
+   - A `LinkedList<Character>` is created to store characters.
 
-3. **Push Operation**
-  - Each character from the string is pushed into the stack.
-  - This reverses the order of characters internally.
+3. **Insert Characters**
+   - Each character of the string is added to the linked list.
 
-4. **Palindrome Assumption**
-  - A boolean variable `isPalindrome` is initialized as `true`.
+4. **Comparison Process**
+   - The program removes characters from both ends:
+      - `removeFirst()` → first character
+      - `removeLast()` → last character
 
-5. **Comparison Process**
-  - The program loops through the string again.
-  - Each character is compared with the character popped from the stack.
+5. **Palindrome Check**
+   - If both characters match, the checking continues.
+   - If they do not match, the string is not a palindrome.
 
-6. **Mismatch Detection**
-  - If any character does not match the popped character, `isPalindrome` becomes `false`.
+6. **Termination Condition**
+   - The process stops when one or zero elements remain.
 
-7. **Result Output**
-  - If all characters match, the string is a **Palindrome**.
-  - Otherwise, it is **Not a Palindrome**.
+7. **Result**
+   - If no mismatch occurs → **Palindrome**
+   - Otherwise → **Not a Palindrome**
 
-### Example
-
-Input:
+### Concepts Used
+- LinkedList data structure
+- Two-end comparison
+- Character traversal

@@ -1,31 +1,32 @@
-## Palindrome Checker using Stack (Java)
+## Palindrome Checker using Queue and Stack
 
 ### Workflow
 
-1. **Input Initialization**
-  - A string input is defined (example: `"noon"`).
+1. **Input String**
+    - Define a string to check if it is a palindrome (example: "civic").
 
-2. **Stack Creation**
-  - A `Stack<Character>` is created to store characters of the string.
+2. **Create Data Structures**
+    - A **Queue** is used to store characters in FIFO order.
+    - A **Stack** is used to store characters in LIFO order.
 
-3. **Push Operation**
-  - Each character from the string is pushed into the stack.
-  - This reverses the order of characters internally.
+3. **Insert Characters**
+    - Each character of the string is inserted into both the queue and the stack.
 
-4. **Palindrome Assumption**
-  - A boolean variable `isPalindrome` is initialized as `true`.
+4. **Comparison Process**
+    - Characters are removed from the queue and stack simultaneously.
+    - Queue gives characters from the **start** of the string.
+    - Stack gives characters from the **end** of the string.
 
-5. **Comparison Process**
-  - The program loops through the string again.
-  - Each character is compared with the character popped from the stack.
+5. **Palindrome Check**
+    - If both characters match, continue checking.
+    - If any mismatch occurs, the string is **not a palindrome**.
 
-6. **Mismatch Detection**
-  - If any character does not match the popped character, `isPalindrome` becomes `false`.
+6. **Result**
+    - If all characters match → **Palindrome**
+    - Otherwise → **Not a Palindrome**
 
-7. **Result Output**
-  - If all characters match, the string is a **Palindrome**.
-  - Otherwise, it is **Not a Palindrome**.
-
-### Example
-
-Input:
+### Concepts Used
+- Stack (LIFO)
+- Queue (FIFO)
+- String traversal
+- Data structure comparison

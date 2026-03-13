@@ -1,15 +1,14 @@
 /**
-* This program checks whether a given string is a palindrome.
-* A palindrome is a word, phrase, or sequence that reads the same
-* forward and backward.
+* This program checks whether a given string is a palindrome
+* using the two-pointer technique.
 *
-* The program compares characters from the beginning and end of
-* the string and loops only until half of the string length
-* for efficiency.
+* The string is first converted into a character array.
+* Two pointers are used: one starting from the beginning
+* and the other from the end of the array.
 *
-* This use case introduces fundamental comparison logic
-* before using advanced data structures.
+* Characters are compared while moving the pointers toward
+* the center. If all characters match, the string is a palindrome.
 *
 * @author Developer
-* @version 2.0
+* @version 4.0
   */

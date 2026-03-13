@@ -1,33 +1,47 @@
-## Palindrome Checker using LinkedList
+## Palindrome Checker using Recursion
 
 ### Workflow
 
-1. **Input Initialization**
-   - Define the input string to test (example: "level").
+1. **Input String**
 
-2. **LinkedList Creation**
-   - A `LinkedList<Character>` is created to store characters.
+   * Define a string to check (example: `"madam"`).
 
-3. **Insert Characters**
-   - Each character of the string is added to the linked list.
+2. **Recursive Function**
 
-4. **Comparison Process**
-   - The program removes characters from both ends:
-      - `removeFirst()` → first character
-      - `removeLast()` → last character
+   * A method `check(String s, int start, int end)` is used to check the palindrome.
 
-5. **Palindrome Check**
-   - If both characters match, the checking continues.
-   - If they do not match, the string is not a palindrome.
+3. **Base Condition**
 
-6. **Termination Condition**
-   - The process stops when one or zero elements remain.
+   * If `start >= end`, the string is a palindrome.
 
-7. **Result**
-   - If no mismatch occurs → **Palindrome**
-   - Otherwise → **Not a Palindrome**
+4. **Character Comparison**
+
+   * Compare the characters at positions `start` and `end`.
+
+5. **Mismatch Condition**
+
+   * If characters are not equal, return `false`.
+
+6. **Recursive Step**
+
+   * Call the function again with:
+   * `start + 1`
+   * `end - 1`
+
+7. **Termination**
+
+   * The recursion continues until all characters are checked.
+
+### Example
+
+Input:
+madam
+
+Output:
+Is Palindrome? : true
 
 ### Concepts Used
-- LinkedList data structure
-- Two-end comparison
-- Character traversal
+
+* Recursion
+* String indexing
+* Base condition and recursive calls

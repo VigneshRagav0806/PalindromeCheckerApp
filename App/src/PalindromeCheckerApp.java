@@ -30,7 +30,6 @@ public class PalindromeCheckerApp {
                 isPalindrome = false;
                 break;
             }
-        }
 
         // Print the result
         if (isPalindrome) {

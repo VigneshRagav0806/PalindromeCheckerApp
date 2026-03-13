@@ -29,7 +29,6 @@ public class PalindromeCheckerApp {
                 isPalindrome = false;
                 break;
             }
-        }
 
         // Print result
         if (isPalindrome) {

@@ -1,33 +1,44 @@
-## Palindrome Checker using LinkedList
+## Palindrome Checker with Execution Time Benchmark
 
 ### Workflow
 
-1. **Input Initialization**
-   - Define the input string to test (example: "level").
+1. **Input String**
 
-2. **LinkedList Creation**
-   - A `LinkedList<Character>` is created to store characters.
+   * Define a string to test for palindrome (example: "level").
 
-3. **Insert Characters**
-   - Each character of the string is added to the linked list.
+2. **Start Time Measurement**
 
-4. **Comparison Process**
-   - The program removes characters from both ends:
-      - `removeFirst()` → first character
-      - `removeLast()` → last character
+   * Use `System.nanoTime()` to record the start time.
 
-5. **Palindrome Check**
-   - If both characters match, the checking continues.
-   - If they do not match, the string is not a palindrome.
+3. **Palindrome Check**
 
-6. **Termination Condition**
-   - The process stops when one or zero elements remain.
+   * A two-pointer technique compares characters from both ends.
 
-7. **Result**
-   - If no mismatch occurs → **Palindrome**
-   - Otherwise → **Not a Palindrome**
+4. **End Time Measurement**
+
+   * `System.nanoTime()` is used again after the check.
+
+5. **Execution Time Calculation**
+
+   * Execution Time = `endTime - startTime`.
+
+6. **Output**
+
+   * Displays the input string.
+   * Shows whether it is a palindrome.
+   * Prints the execution time in nanoseconds.
+
+### Example
+
+Input:
+level
+
+Output:
+Is Palindrome? : true
+Execution Time : 85200 ns
 
 ### Concepts Used
-- LinkedList data structure
-- Two-end comparison
-- Character traversal
+
+* Algorithm benchmarking
+* System.nanoTime()
+* Two-pointer palindrome algorithm

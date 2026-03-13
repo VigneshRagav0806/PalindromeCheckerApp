@@ -1,39 +1,48 @@
-import java.util.LinkedList;
+public class UseCase13PalindromeCheckerApp {
 
-public class PalindromeCheckerApp {
-
+    /**
+     * Application entry point for UC13.
+     * @param args Command-line arguments
+     */
     public static void main(String[] args) {
 
-        // Define the input string
+        // Input string
         String input = "level";
 
-        // Create a LinkedList to store characters
-        LinkedList<Character> list = new LinkedList<>();
+        // Start time measurement
+        long startTime = System.nanoTime();
 
-        // Add each character to the linked list
-        for (char c : input.toCharArray()) {
-            list.add(c);
-        }
+        // Palindrome check using two-pointer technique
+        boolean isPalindrome = checkPalindrome(input);
 
-        // Flag to track palindrome state
-        boolean isPalindrome = true;
+        // End time measurement
+        long endTime = System.nanoTime();
 
-        // Compare until only one or zero elements remain
-        while (list.size() > 1) {
+        // Calculate execution time
+        long executionTime = endTime - startTime;
 
-            char first = list.removeFirst(); // remove first character
-            char last = list.removeLast();   // remove last character
+        // Display results
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + isPalindrome);
+        System.out.println("Execution Time : " + executionTime + " ns");
+    }
 
-            if (first != last) {
-                isPalindrome = false;
-                break;
+    // Method to check palindrome
+    public static boolean checkPalindrome(String input) {
+
+        int start = 0;
+        int end = input.length() - 1;
+
+        while (start < end) {
+
+            if (input.charAt(start) != input.charAt(end)) {
+                return false;
             }
 
-        // Print result
-        if (isPalindrome) {
-            System.out.println(input + " is a palindrome.");
-        } else {
-            System.out.println(input + " is not a palindrome.");
+            start++;
+            end--;
         }
+
+        return true;
     }
 }

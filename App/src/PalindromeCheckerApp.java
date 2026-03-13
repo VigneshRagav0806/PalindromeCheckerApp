@@ -1,39 +1,27 @@
-import java.util.LinkedList;
-
-public class PalindromeCheckerApp {
+public class UseCase10PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // Define the input string
-        String input = "level";
+        // Input string
+        String input = "A man a plan a canal Panama";
 
-        // Create a LinkedList to store characters
-        LinkedList<Character> list = new LinkedList<>();
+        // Normalize the string (remove spaces and convert to lowercase)
+        String normalized = input.replaceAll("\\s+", "").toLowerCase();
 
-        // Add each character to the linked list
-        for (char c : input.toCharArray()) {
-            list.add(c);
-        }
-
-        // Flag to track palindrome state
         boolean isPalindrome = true;
 
-        // Compare until only one or zero elements remain
-        while (list.size() > 1) {
+        // Compare characters from both ends
+        for (int i = 0; i < normalized.length() / 2; i++) {
 
-            char first = list.removeFirst(); // remove first character
-            char last = list.removeLast();   // remove last character
-
-            if (first != last) {
+            // Compare symmetric characters
+            if (normalized.charAt(i) != normalized.charAt(normalized.length() - 1 - i)) {
                 isPalindrome = false;
                 break;
             }
+        }
 
         // Print result
-        if (isPalindrome) {
-            System.out.println(input + " is a palindrome.");
-        } else {
-            System.out.println(input + " is not a palindrome.");
-        }
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + isPalindrome);
     }
 }

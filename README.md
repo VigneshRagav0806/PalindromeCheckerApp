@@ -1,32 +1,32 @@
-## Palindrome Checker using Strategy Pattern (Stack Implementation)
+## Palindrome Checker with Execution Time Benchmark
 
 ### Workflow
 
-1. **Strategy Interface**
+1. **Input String**
 
-    * `PalindromeStrategy` defines a method `check(String input)`.
+   * Define a string to test for palindrome (example: "level").
 
-2. **Concrete Strategy**
+2. **Start Time Measurement**
 
-    * `StackStrategy` implements the interface.
-    * Uses a **Stack (LIFO)** to reverse characters.
+   * Use `System.nanoTime()` to record the start time.
 
-3. **Push Characters**
+3. **Palindrome Check**
 
-    * Each character of the string is pushed into the stack.
+   * A two-pointer technique compares characters from both ends.
 
-4. **Comparison**
+4. **End Time Measurement**
 
-    * Characters are popped from the stack and compared with the original string.
+   * `System.nanoTime()` is used again after the check.
 
-5. **Mismatch Handling**
+5. **Execution Time Calculation**
 
-    * If any character differs → return `false`.
+   * Execution Time = `endTime - startTime`.
 
-6. **Main Class**
+6. **Output**
 
-    * `UseCase12PalindromeCheckerApp` creates the strategy object.
-    * Calls the `check()` method to verify palindrome.
+   * Displays the input string.
+   * Shows whether it is a palindrome.
+   * Prints the execution time in nanoseconds.
 
 ### Example
 
@@ -35,9 +35,10 @@ level
 
 Output:
 Is Palindrome? : true
+Execution Time : 85200 ns
 
 ### Concepts Used
 
-* Strategy Design Pattern
-* Stack Data Structure
-* LIFO Principle
+* Algorithm benchmarking
+* System.nanoTime()
+* Two-pointer palindrome algorithm

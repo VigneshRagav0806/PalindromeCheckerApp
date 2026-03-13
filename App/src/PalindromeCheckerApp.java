@@ -1,39 +1,39 @@
-import java.util.LinkedList;
-
-public class PalindromeCheckerApp {
+public class UseCase9PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // Define the input string
-        String input = "level";
+        // Input string
+        String input = "madam";
 
-        // Create a LinkedList to store characters
-        LinkedList<Character> list = new LinkedList<>();
+        // Call recursive method
+        boolean result = check(input, 0, input.length() - 1);
 
-        // Add each character to the linked list
-        for (char c : input.toCharArray()) {
-            list.add(c);
+        // Display result
+        System.out.println("Input : " + input);
+        System.out.println("Is Palindrome? : " + result);
+    }
+
+    /**
+     * Recursively checks whether a string is palindrome.
+     *
+     * @param s     Input string
+     * @param start Starting index
+     * @param end   Ending index
+     * @return true if palindrome, otherwise false
+     */
+    private static boolean check(String s, int start, int end) {
+
+        // Base case: if start crosses end, palindrome confirmed
+        if (start >= end) {
+            return true;
         }
 
-        // Flag to track palindrome state
-        boolean isPalindrome = true;
-
-        // Compare until only one or zero elements remain
-        while (list.size() > 1) {
-
-            char first = list.removeFirst(); // remove first character
-            char last = list.removeLast();   // remove last character
-
-            if (first != last) {
-                isPalindrome = false;
-                break;
-            }
-
-        // Print result
-        if (isPalindrome) {
-            System.out.println(input + " is a palindrome.");
-        } else {
-            System.out.println(input + " is not a palindrome.");
+        // If characters do not match
+        if (s.charAt(start) != s.charAt(end)) {
+            return false;
         }
+
+        // Recursive call for next inner characters
+        return check(s, start + 1, end - 1);
     }
 }

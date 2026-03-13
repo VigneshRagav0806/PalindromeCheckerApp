@@ -28,9 +28,8 @@ public class PalindromeCheckerApp {
                 isPalindrome = false;
                 break;
             }
-        }
 
-        // Print the result
+        // Print result
         if (isPalindrome) {
             System.out.println(input + " is a palindrome.");
         } else {
